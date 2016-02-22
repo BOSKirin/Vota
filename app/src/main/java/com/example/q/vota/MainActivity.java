@@ -87,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void testingGitPush() {
+        
+    }
+
     private void initializeContent() {
         Toolbar toolbar_v7 = (Toolbar) findViewById(R.id.toolbar_v7);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
