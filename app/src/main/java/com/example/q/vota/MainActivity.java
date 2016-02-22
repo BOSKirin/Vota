@@ -165,10 +165,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         final VerticalPagerAdapter verticalPagerAdapter = (VerticalPagerAdapter)mVerticalViewPager.getAdapter();
-        final DataFragment accountsFragment = Fragment1.newInstance();
-        verticalPagerAdapter.addFragment(0, accountsFragment);
-        final DataFragment walletFragment = Fragment2.newInstance();
-        verticalPagerAdapter.addFragment(1, walletFragment);
+        final DataFragment fragment_1 = Fragment1.newInstance();
+        verticalPagerAdapter.addFragment(0, fragment_1);
+        final DataFragment fragment_2 = Fragment2.newInstance();
+        verticalPagerAdapter.addFragment(1, fragment_2);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
