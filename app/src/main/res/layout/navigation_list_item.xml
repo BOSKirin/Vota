@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:paddingLeft="16dp">
+
+    <ImageView
+        android:id="@+id/navigation_list_item_image"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arrow"
+        android:layout_marginRight="24dp"/>
+
+    <TextView
+        android:id="@+id/navigation_list_item_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/body_text"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:text="@string/fragment_title_main_screen"
+        android:textAllCaps="true"/>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseTheme">
+        <attr name="actionBarIconColor" format="color" />
+    </declare-styleable>
+
+    <item name="header_shadow" type="drawable">@drawable/bottom_shadow</item>
+
+    <declare-styleable name="CoverFlow">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="withReflection" format="boolean" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="imageReflectionRatio" format="float" />
+    </declare-styleable>
+</resources>

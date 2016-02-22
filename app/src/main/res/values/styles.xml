@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="AppTheme.Base" />
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/primary</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:elevation" tools:ignore="NewApi">4dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:id="@+id/account_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/account_holder_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:text="George Wilson" />
+
+        <TextView
+            android:id="@+id/account_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_holder_field"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="@string/fragment_title_main_screen"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:id="@+id/account_balance_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_balance_label"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-light"
+            android:singleLine="true"
+            android:text="@string/fragment_title_main_screen"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            tools:text="$1,000,000.00" />
+
+        <ProgressBar
+            android:id="@+id/account_balance_progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:padding="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="@dimen/abc_action_bar_progress_bar_size"
+            android:layout_height="@dimen/abc_action_bar_progress_bar_size"
+            android:indeterminateTint="@android:color/white"
+            android:indeterminateTintMode="src_in"
+            android:layout_toRightOf="@+id/account_balance_field"
+            android:layout_alignTop="@+id/account_balance_field"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

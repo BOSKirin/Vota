@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vota</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragment_title_main_screen">Welcome to Vota</string>
+    <string name="fragment_title_1">Sample One</string>
+    <string name="fragment_title_2">SAMEPLE TWO</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_uninstall">Uninstall</string>
+    <string name="action_uninstall_all_users">Uninstall for ALL Users</string>
+
+</resources>
