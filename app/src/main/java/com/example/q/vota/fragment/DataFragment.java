@@ -11,9 +11,8 @@ import android.text.TextUtils;
  */
 public class DataFragment extends Fragment {
 
-    public static final String KEY_ACCOUNT_BALANCE = "com.simplytapp.demo.ui.activities.MainActivity.KEY_ACCOUNT_BALANCE";
-    public static final String KEY_DEFAULT_ACCOUNT_ID = "com.simplytapp.demo.ui.activities.MainActivity.KEY_DEFAULT_ACCOUNT_ID";
-    public static final String KEY_USER_ID = "com.simplytapp.demo.ui.activities.MainActivity.KEY_USER_ID";
+    public static final String KEY_1 = "MainActivity.KEY_ONE";
+    public static final String KEY_2 = "MainActivity.KEY_TWO";
 
 
     public DataFragment() {

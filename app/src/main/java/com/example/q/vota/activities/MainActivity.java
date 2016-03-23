@@ -1,6 +1,8 @@
-package com.example.q.vota;
+package com.example.q.vota.activities;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.q.vota.R;
 import com.example.q.vota.fragment.DataFragment;
 import com.example.q.vota.fragment.Fragment1;
 import com.example.q.vota.fragment.Fragment2;
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         initializeContent();
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -132,10 +139,52 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-                    case 9: {
-//                        final Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
-//                        intent.putExtra(Constants.KEY_USER, "Group1");
-//                        startActivity(intent);
+                    case 0: {
+                        final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent);
+                    }
+                    break;
+                    case 1: {
+                        final Intent intent = new Intent(getApplicationContext(), GopActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+                    case 2: {
+                        final Intent intent = new Intent(getApplicationContext(), DncActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+                    case 3: {
+                        final Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+//                        intent.putExtra(Constants.KEY_USER, "user_info");
+                        startActivity(intent);
+                    }
+                    break;
+                    case 4: {
+                        final Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+                    case 5: {
+                        final Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+                    case 6: {
+                        showAlertDialog(MainActivity.this,"Logout","Are you sure you want to log out!!!","YES",new Runnable() {
+                            @Override
+                            public void run() {
+                                //Log out user and bring user back to login screen
+//                                final Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+//                                startActivity(intent);
+                            }
+                        }, "NO", new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        }, null, null);
                     }
                     break;
                     default: {
@@ -196,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public int getCount() {
-            return 11;
+            return 7;
         }
 
         public Object getItem(final int position) {
@@ -219,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("accounts");
+                    memuText.setText("Home");
                 }
                 break;
                 case 1: {
@@ -227,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("rewards");
+                    memuText.setText("GOP");
                 }
                 break;
                 case 2: {
@@ -235,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("transfer");
+                    memuText.setText("DNC");
                 }
                 break;
                 case 3: {
@@ -243,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("pay bill");
+                    memuText.setText("Your Profile");
                 }
                 break;
                 case 4: {
@@ -251,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("pay people");
+                    memuText.setText("Help");
                 }
                 break;
                 case 5: {
@@ -259,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("mobile deposit");
+                    memuText.setText("Settings");
                 }
                 break;
                 case 6: {
@@ -267,41 +316,10 @@ public class MainActivity extends AppCompatActivity {
                     menuImage.setImageResource(R.drawable.arrow);
 
                     final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("locations");
+                    memuText.setText("Log out");
                 }
                 break;
-                case 7: {
-                    final ImageView menuImage = (ImageView) _convertView.findViewById(R.id.navigation_list_item_image);
-                    menuImage.setImageResource(R.drawable.arrow);
 
-                    final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("contact us");
-                }
-                break;
-                case 8: {
-                    final ImageView menuImage = (ImageView) _convertView.findViewById(R.id.navigation_list_item_image);
-                    menuImage.setImageResource(R.drawable.arrow);
-
-                    final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("help");
-                }
-                break;
-                case 9: {
-                    final ImageView menuImage = (ImageView) _convertView.findViewById(R.id.navigation_list_item_image);
-                    menuImage.setImageResource(R.drawable.arrow);
-
-                    final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("settings");
-                }
-                break;
-                case 10: {
-                    final ImageView menuImage = (ImageView) _convertView.findViewById(R.id.navigation_list_item_image);
-                    menuImage.setImageResource(R.drawable.arrow);
-
-                    final TextView memuText = (TextView) _convertView.findViewById(R.id.navigation_list_item_menu);
-                    memuText.setText("log out");
-                }
-                break;
             }
 
             return _convertView;
@@ -356,5 +374,45 @@ public class MainActivity extends AppCompatActivity {
         }
 
         super.onBackPressed();
+    }
+
+    public void showAlertDialog(Context context, String title, String message,
+                                String positiveButtonName, final Runnable positiveClickListener,
+                                String negativeButtonName, final Runnable negativeClickListener,
+                                String neutralButtonName, final Runnable neutralClickListener){
+        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+        if (title != null){
+            dialogBuilder.setTitle(title);
+        }
+        dialogBuilder.setMessage(message);
+
+        if (positiveButtonName != null){
+            dialogBuilder.setPositiveButton(positiveButtonName, new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int arg1) {
+                    dialog.dismiss();
+                    if (positiveClickListener != null) { positiveClickListener.run(); }
+                }
+            });
+        }
+
+        if (negativeButtonName != null){
+            dialogBuilder.setNegativeButton(negativeButtonName, new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int arg1) {
+                    dialog.dismiss();
+                    if (negativeClickListener != null) { negativeClickListener.run();}
+                }
+            });
+        }
+
+        if (neutralButtonName != null){
+            dialogBuilder.setNeutralButton(negativeButtonName, new DialogInterface.OnClickListener(){
+                public void onClick(DialogInterface dialog, int arg1) {
+                    dialog.dismiss();
+                    if (neutralClickListener != null)  {  neutralClickListener.run(); }
+                }
+            });
+        }
+
+        dialogBuilder.show();
     }
 }
