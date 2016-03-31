@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         String PACKAGE_NAME = getApplicationContext().getPackageName();
 
+        //change me
         //noinspection SimplifiableIfStatement
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
